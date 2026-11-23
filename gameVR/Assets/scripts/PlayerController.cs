@@ -39,4 +39,14 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
+
+void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Coin"))
+    {
+        FindObjectOfType<GameManager>().AddScore(1);
+        Destroy(other.gameObject);
+    }
+}
+
 }
