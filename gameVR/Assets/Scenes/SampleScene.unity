@@ -3662,6 +3662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 7
+  coinSound: {fileID: 8300000, guid: d5c37b3b7ee077342b0584c890d4cda9, type: 3}
 --- !u!1001 &1290238400157224628
 PrefabInstance:
   m_ObjectHideFlags: 0

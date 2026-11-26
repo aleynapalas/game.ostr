@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
-
+    public AudioClip coinSound;
     private Rigidbody2D rb;
     private bool isGrounded;
 
@@ -51,6 +51,7 @@ void OnTriggerEnter2D(Collider2D other)
     if (other.CompareTag("Coin"))
     {
         FindObjectOfType<GameManager>().AddScore(1);
+        AudioSource.PlayClipAtPoint(coinSound, transform.position);
         Destroy(other.gameObject);
     }
 
