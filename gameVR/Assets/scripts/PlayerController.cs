@@ -58,6 +58,12 @@ void OnTriggerEnter2D(Collider2D other)
     if (other.CompareTag("Hazard"))
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+    }
+
+    if (other.CompareTag("Finish"))
+    {
+        FindObjectOfType<GameManager>().WinGame();
     }
 }
 
